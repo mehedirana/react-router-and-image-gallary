@@ -28,7 +28,7 @@ export default function Home() {
         <button onClick={() => getImage()}>send</button>
       </div>
 
-      <div style={{display:'flex', justifyContent:'space-around'}}>
+      <div style={{justifyContent:'space-around'}}>
         {
           data.map((item, index)=>{
              return (<div key={index} >
