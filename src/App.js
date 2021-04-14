@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";

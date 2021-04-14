@@ -1,11 +1,14 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
+import { articleReducer } from './articles/articlesReducer';
 
-const rootReducer = combineReducers({name: "mehedirana ", age:'26'})
+const rootReducer = combineReducers({
+    articleReducer: articleReducer
+})
 const initialState ={
-    name: 'nam nai',
-    age: 'age nai'
+    data: []
 }
-const middleware = [thunk]
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || compose;
-export const store = createStore(rootReducer, initialState, composeEnhancers(applyMiddleware(...middleware)))
+// const middleware = [thunk]
+// const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export const store = createStore(articleReducer)
